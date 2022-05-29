@@ -207,7 +207,7 @@ public class IRCBot extends PircBot {
 //		}
 		for (DownloadAble dla : XDCCDL.getInstance().dlaManager.getDownloadables()) {
 			if (dla.isEnabled()) {
-				if (event.getUser().containsIgnoreCase(dla.getBot())) {
+				if (event.getUser().equalsIgnoreCase(dla.getBot())) {
 					return true;
 				}
 			}
